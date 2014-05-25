@@ -254,10 +254,10 @@ $cities = array(
 );
 
 // set variables
-$initialPopulationSize = 100;
+$initialPopulationSize = 50;
 $roundPopulationSize = 10;
-$mutationProbability = 0.3;
-$maxEvolutionSteps = 500000;
+$mutationProbability = 0.2;
+$maxEvolutionSteps = 100;
 
 // initialization
 $population = new Population();
@@ -272,7 +272,7 @@ do {
     $population->doMutation($mutationProbability);
     // increase counter for evolution steps
     $iEvolutionStep++;
-} while($iEvolutionStep > $maxEvolutionSteps);
+} while($iEvolutionStep < $maxEvolutionSteps);
 
 $bestSolution = $population->getBestSolution();
 

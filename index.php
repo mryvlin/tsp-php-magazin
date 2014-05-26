@@ -92,7 +92,7 @@ class Solution {
      * @param array $cities
      * @return Solution
      */
-    static function generateRandom($cities){
+    public static function generateRandom($cities){
         shuffle($cities);
         return new Solution($cities);
     }
